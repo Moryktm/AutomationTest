@@ -1,0 +1,7 @@
+{
+  "goodUsername": "John Doe",
+  "goodPassword": "ThisIsNotAPassword",
+  "wrongUsername": "John Steve",
+  "wrongPassword": "thisispassword",
+  "date": "04/12/2024"
+}
