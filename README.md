@@ -42,13 +42,7 @@ In order to generate Allure Report follow these steps:
 ### test case 2: User appointment with uncorrect login
 * Acces au site au site https://katalon-demo-cura.herokuapp.com/.
 * Cliquer sur le bouton "Make Appointment"
-* Saisir le username "John Doe'
-* Saisir le password "Password"
+* Saisir le username
+* Saisir le password
 * Cliquer sur le bouton "Login"
-* Choisir la facility "Hongkong CURA Healthcare Center"
-* Cliquer sur "Apply for hospital readmission"
-* Cliquer sur "Medicaid"
-* Saisir la date "04/12/2024"
-* Saisir le commentaire "Je souhaite faire une consultation ophtalmologique"
-* Cliquer sur "Book Appointment"
-* Verifier que le texte sur la page est "Appointment Confirmation"
+* Verifier que le texte sur la page est "Login failed! Please ensure the username and password are valid.
