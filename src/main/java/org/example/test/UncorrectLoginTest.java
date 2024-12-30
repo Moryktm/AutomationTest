@@ -3,13 +3,17 @@ package org.example.test;
 import io.qameta.allure.*;
 import org.example.page.HomePage;
 import org.example.page.LoginPage;
+import org.example.utils.XrayListener;
+import org.example.utils.XrayTest;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestCas2 extends TestBasic {
+@Listeners(XrayListener.class)
+public class UncorrectLoginTest extends TestBasic {
 
     @Test(description = "Test case: User appointment with uncorrect login")
     @Severity(SeverityLevel.NORMAL)
@@ -22,6 +26,7 @@ public class TestCas2 extends TestBasic {
             5- Cliquer sur le bouton "Login"
             12-Verifier que le texte sur la page est "Login failed! Please ensure the username and password are valid."
             """)
+    @XrayTest(key = "QA-18")
     public void userAppointmentWithNoneCorrectLogin() throws IOException, ParseException {
         verifyHomePageIsVisible();
         verifyLoginPageIsVisible();

@@ -14,4 +14,22 @@ public class PropertiesLoader {
         properties.load(inputStream);
         return properties.getProperty(propertyName);
     }
+
+    public static String loadXrayProperty(String propertyName) throws IOException {
+
+        InputStream inputStream = new FileInputStream("src/main/resources/xray.properties");
+        Properties properties = new Properties();
+        properties.load(inputStream);
+        return properties.getProperty(propertyName);
+    }
+
+    public static String loadJiraProperty(String propertyName) throws IOException {
+
+        InputStream inputStream = new FileInputStream("src/main/resources/jira.properties");
+        Properties properties = new Properties();
+        properties.load(inputStream);
+        return properties.getProperty(propertyName);
+    }
+
+
 }

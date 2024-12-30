@@ -3,12 +3,12 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/user/Documents/Test/SeleniumTest">
         <classes>
-            <class name="org.example.test.TestCas2">
+            <class name="org.example.test.UncorrectLoginTest">
                 <methods>
                     <include name="userAppointmentWithNoneCorrectLogin"/>
                 </methods>
             </class>
-            <class name="org.example.test.TestCase1">
+            <class name="org.example.test.CorrectLoginTest">
                 <methods>
                     <include name="userAppointmentWithCorrectLogin"/>
                 </methods>

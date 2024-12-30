@@ -4,13 +4,17 @@ import io.qameta.allure.*;
 import org.example.page.AppointmentPage;
 import org.example.page.HomePage;
 import org.example.page.LoginPage;
+import org.example.utils.XrayListener;
+import org.example.utils.XrayTest;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestCase1 extends TestBasic{
+@Listeners(XrayListener.class)
+public class CorrectLoginTest extends TestBasic{
 
     @Test(description = "Test case: User appointment with correct login")
     @Severity(SeverityLevel.CRITICAL)
@@ -29,6 +33,7 @@ public class TestCase1 extends TestBasic{
             11-Cliquer sur "Book Appointment"
             12-Verifier que le texte sur la page est "Appointment Confirmation"
             """)
+    @XrayTest(key = "QA-17")
     public void userAppointmentWithCorrectLogin() throws IOException, ParseException {
         verifyHomePageIsVisible();
         verifyLoginPageIsVisible();
